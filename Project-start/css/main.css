@@ -1,0 +1,208 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+.title-1 {
+	font-size: 34px;
+	font-weight: 600; 
+	/* переменная */
+}
+.conteiner {
+	max-width: 1230px;
+	padding: 0px 30px 0px 30px;
+	margin: 0 auto;
+}
+/* conteiner - который ограничивает контент подожат внутренним отступом и + этот padding вщитан в max-width!Тоесть в данном случае + 60px
+-Для адаптива, максимальная ширина чтобы уменшался.Отступы нужны в качевстве полей*/
+
+
+
+/* Header */
+.header {
+	background-color: #F1F1F1;
+	padding: 46px 0px 0px 0px;
+}
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 76px;
+}
+/*--- Делаем точку под логотипом ----*/
+.logo {
+	position: relative;
+	padding: 0px 12px 3px 0px;
+	font-weight: 700;
+	color: #000;
+	font-size: 32px;
+	line-height: 1;/*забирает отступ по дефолту делая его 100%*/
+}
+.logo::after {
+	position: absolute;
+	right: 0;
+	bottom: 0;/*Позиционирования обекта внизу-справа*/
+	content: "";
+	display: block;
+	width: 8px;
+	height: 8px;
+	background-color: #FDA300;
+	border-radius: 50%;
+}
+
+.nav {
+}
+/* flex задаем именно елементу ul. */
+.nav-list {
+	display: flex;
+	column-gap: 50px;/* свойство которое делает растояние между елементами меню */
+	font-weight: 500;
+	font-size: 14px;
+}
+
+/* Для десктопной версии делаем бургер невидимым затем задаем размер при котором он появляеться */
+.nav-button {
+	display: none;
+}
+.nav-link {
+	color: #000;
+}
+.nav-link.active {
+	color: #606060;
+}
+
+
+.header-row {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 30px; /*для того чтобы при сжатии был отступ между блоками*/
+}
+.header-heading {
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 44px;
+}
+
+.header-content {
+	margin-top: 124px;
+	max-width: 500px;
+}
+.header-content p {
+	line-height: 2;
+}
+.header-img {
+}
+
+
+
+/* Servicese */
+
+.services {
+	padding: 90px 0px;
+}
+.sevices-row {
+	display: flex;
+	column-gap: 30px;
+}
+.sevice-card {
+}
+.service-card-img {
+	margin-bottom: 30px;
+}
+.service-card-title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.sevice-card p {
+	line-height: 2;
+}
+
+/* Portfolio */
+
+
+
+.project + .project {/* Добавляет отступ всем кроме первого блока */
+	margin-bottom: 90px;
+}
+
+.portfolio {
+	background-color: #F1F1F1;
+	padding: 90px 0px;
+}
+
+.portfolio-title h2{
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.project {
+	text-align: center;
+}
+.portfolio-img {
+	margin-bottom: 40px;
+}
+.project-tetle {
+	font-size: 18px;
+}
+.project-tetle a {
+	color: #000;
+	text-decoration: underline;
+}
+
+/*footer*/
+
+.contants {
+	padding: 90px 0px;
+	text-align: center;
+}
+.contants-title {
+	margin-bottom: 40px;
+}
+
+.contants-contants { /*Выставим бллок по центру указав right and left margin = auto */
+	max-width: 480px;
+	font-size: 18px;
+	margin: 0 auto 40px;
+}
+
+.contants-contants p + p {
+	margin-top: 1em; /* Для каждого следуещего доаленного абзаца будет создан отстуа: 1em=размеру шрифта текста*/
+}
+
+.contants-button {
+	margin-bottom: 80px;
+}
+.btn {
+	display: inline-block;
+	background-color: #070707;
+	padding: 7px 22px;
+	border-radius: 30px;
+	font-size: 18px;
+	color: #fff;
+	transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+.contants-social {
+	display: flex;
+	justify-content: center;
+	column-gap: 60px;
+	align-items: center;
+	margin-bottom: 40px;
+}
+.contants-footer {
+	color: #828282;
+}
+
+.btn:hover, .btn:focus {
+	background-color: #323232;
+}
+.btn:active {
+	position: relative;
+	top: 1px;
+	background-color: #070707;
+}
+
